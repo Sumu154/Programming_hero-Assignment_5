@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" theme="light">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <!-- tailwind + daisy -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- javascript -->
+        <script src="scripts/custom-style.js"></script>
+
+
+        <!-- text font -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        </style>
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/66cabd1410.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+      <header class="bg-lightash pt-6 pb-12 sticky top-0 z-50">
+        <nav class="max-w-[90%] mx-auto flex justify-between items-center">
+          <button class="text-black font-semibold bg-lightgreen px-8 py-3 rounded-lg text-base lg:text-xl"> 
+            <a href="blog.html"> Blog </a>
+          </button>
+          <div class="flex items-center gap-4">
+            <img src="assets/logo.png" alt="">
+            <span class="text-black font-semibold text-base lg:text-xl"> Donate Bangladesh </span> 
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/coin.png" alt="">
+            <p class="font-medium opacity-70 text-base lg:text-xl"> 5500 BDT </p>
+          </div>
+        </nav>
+      </header>
+
+      <main class="my-[72px] bg-green-700">
+        <div class="max-w-[80%] mx-auto justify-center">
+          <div class="flex justify-center gap-4 my-6">
+            <button class="text-black font-semibold bg-lightgreen px-8 py-3 rounded-lg text-base lg:text-xl"> Donation </button>
+            <button class="text-black text-opacity-70 font-semibold px-8 py-3 rounded-lg border-bordercolor border-[1px]  text-base lg:text-xl"> History </button>
+          </div>
+
+          <!-- first card -->
+          <div class="flex bg-red-600">
+            <img class="max-w-[45%]" src="../assets/noakhali.png " alt="">
+            <div class="max-w-[55%]">
+              <div class="flex items-center gap-3">
+                <img src="assets/coin.png" alt="">
+                <p class="font-medium opacity-70 text-base lg:text-xl"> 0 BDT </p>
+              </div>
+              <p class="text-black font-bold text-base lg:text-xl"> Donate for Flood at Noakhali, Bangladesh </p>
+              <p class="text-black text-opacity-70 text-sm lg:text-base">
+                The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster.
+                Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+              </p>
+              <input class="p" type="text" placeholder="Write Donation Amount">
+            </div>
+          </div>
+
+        </div>
+
+
+      </main>
+
+      <footer>
+
+      </footer>
+
+      <script src="../scripts/"></script>
+    </body>
+
+
+</html>
