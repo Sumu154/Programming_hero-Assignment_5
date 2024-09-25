@@ -43,7 +43,7 @@
         </div>
 
         <!-- toggle button -->
-        <div class="flex justify-center gap-4 my-6">
+        <div id="toggle-btn" class="flex justify-center gap-4 py-6">
           <button id="donation-btn" class="text-black font-semibold bg-lightgreen px-8 py-3 rounded-lg text-base lg:text-xl"> Donation </button>
           <button id="history-btn" class="text-black text-opacity-70 font-semibold px-8 py-3 rounded-lg border-bordercolor border-[1px]  text-base lg:text-xl"> History </button>
         </div>
@@ -54,17 +54,17 @@
 
                     <!-- the modal for congratulation -->
           <!-- Open the modal using ID.showModal() method -->
-          <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
-          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box">
-              <h3 class="text-lg font-bold">Hello!</h3>
-              <p class="py-4">Press ESC key or click the button below to close</p>
-              <div class="modal-action">
-                <form method="dialog">
-                  <!-- if there is a button in form, it will close the modal -->
-                  <button class="btn">Close</button>
-                </form>
-              </div>
+          <dialog id="modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col gap-2 w-[350px]">
+                <h3 class="text-3xl font-bold text-center"> Congrates! </h3>
+                <img class="mx-auto mb-2" src="assets/coin.png" alt="">
+                <p class="text-center  text-base md:text-lg">You have donated for humankind</p>
+                <p class="text-center font-bold text-lg md:text-xl"> Successfully </p>
+                <div class="modal-action justify-center">
+                    <form method="dialog">
+                        <button id="close-btn" class="btn"> Close confirmation </button>
+                    </form>
+                </div>
             </div>
           </dialog>
 
@@ -133,7 +133,9 @@
 
                     <!-- History  -->
         <div id="history-div" class="hidden max-w-[85%] mx-auto">
-
+          <div class="border-bordercolor border-[1px] mb-4">
+            
+          </div>
         </div>
 
 

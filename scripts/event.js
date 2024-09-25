@@ -1,12 +1,15 @@
   // window scrolling header sticky
-const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const toggleBtn = document.getElementById('toggle-btn');
 
-// Add blur-on-scroll class on scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
+    if(window.scrollY > 0){
         header.classList.add('bg-lightash');
-    } else {
+        toggleBtn.classList.add('pt-0');
+    } 
+    else{
         header.classList.remove('bg-lightash');
+        toggleBtn.classList.remove('pt-0');
     }
 });
 
@@ -45,6 +48,12 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     historyDiv.classList.add('hidden');
 
 })
+
+
+
+
+
+
 
 
 

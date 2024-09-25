@@ -9,6 +9,9 @@ document.getElementById('noakhali-donate').addEventListener('click', function(ev
         document.getElementById('noakhali-money').innerText = presentMoney + addMoney; 
         document.getElementById('total-money').innerText = totalMoney - addMoney;
 
+        const modal = document.getElementById('modal');
+        modal.showModal();
+
     }
     else{
         alert('Failed to add Money.Please try again.')
@@ -25,6 +28,9 @@ document.getElementById('feni-donate').addEventListener('click', function(event)
 
         document.getElementById('feni-money').innerText = presentMoney + addMoney;
         document.getElementById('total-money').innerText = totalMoney - addMoney;
+
+        const modal = document.getElementById('modal');
+        modal.showModal();
     }
     else{
         alert('Falied to add Money. Please try again.')
@@ -42,11 +48,25 @@ document.getElementById('quota-donate').addEventListener('click', function(event
 
         document.getElementById('quota-money').innerText = presentMoney + addMoney;
         document.getElementById('total-money').innerText = totalMoney - addMoney;
+
+        const modal = document.getElementById('modal');
+        modal.showModal();
+
     }
     else{
         alert('Falied to add Money. Please try again.')
     }
 
 })
+
+
+// close btn e click korle input field clear hbe
+document.getElementById('close-btn').addEventListener('click', function(){
+    document.getElementById('noakhali-add').value = "";
+    document.getElementById('feni-add').value = "";
+    document.getElementById('quota-add').value = "";
+})
+
+
 
 
