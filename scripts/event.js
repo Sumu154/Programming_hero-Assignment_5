@@ -1,29 +1,51 @@
-     // toggle donation - history
-document.getElementById('history-btn').addEventListener('click', function(){
-    document.getElementById('history-div').classList.remove('hidden');
-    document.getElementById('donation-div').classList.add('hidden');
-})
+  // window scrolling header sticky
+const header = document.querySelector('header');
 
+// Add blur-on-scroll class on scroll
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add('bg-lightash');
+    } else {
+        header.classList.remove('bg-lightash');
+    }
+});
+
+
+// toggle donation - history
+  // donation -> history
+document.getElementById('history-btn').addEventListener('click', function(){
+
+    const donationBtn = document.getElementById('donation-btn');
+    const historyBtn = document.getElementById('history-btn');
+    const donationDiv = document.getElementById('donation-div');
+    const historyDiv = document.getElementById('history-div');
+
+    donationBtn.classList.add('text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    donationBtn.classList.remove('bg-lightgreen');
+    historyBtn.classList.add('bg-lightgreen');
+    historyBtn.classList.remove('text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    
+    historyDiv.classList.remove('hidden');
+    donationDiv.classList.add('hidden');
+})
 
 document.getElementById('donation-btn').addEventListener('click', function(){
-    document.getElementById('donation-div').classList.remove('hidden');
-    document.getElementById('history-div').classList.add('hidden');
+    const donationBtn = document.getElementById('donation-btn');
+    const historyBtn = document.getElementById('history-btn');
+    const donationDiv = document.getElementById('donation-div');
+    const historyDiv = document.getElementById('history-div');
+
+    donationBtn.classList.add('bg-lightgreen');
+    donationBtn.classList.remove('text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    historyBtn.classList.add('text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    historyBtn.classList.remove('bg-lightgreen');
+
+
+    donationDiv.classList.remove('hidden');
+    historyDiv.classList.add('hidden');
 
 })
 
 
-  // add donation money 
-document.getElementById('noakhali-donate').addEventListener('click', function(event){
-    event.preventDefault();
-    const addMoney = parseFloat(document.getElementById('noakhali-add').value);      // input er money string ke number e nite hbe
-    if(addMoney > 0){
-        const presentMoney = parseFloat(document.getElementById('noakhali-money').innerText);
-        const totalMoney = parseFloat(document.getElementById('total-money').innerText);
 
-        document.getElementById('noakhali-money').innerText = presentMoney + addMoney; 
 
-    }
-    else{
-        alert('Failed to add Money.Please try again.')
-    }
-})

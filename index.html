@@ -27,15 +27,15 @@
       <header class="sticky top-0 z-50">
         <!-- nav nar inside div -->
         <div class="p-4 pb-8 bg-lightash">
-          <nav class="max-w-[90%] mx-auto flex justify-between items-cente">
+          <nav class="max-w-[90%] mx-auto flex justify-between items-center">
             <button class="text-black font-semibold bg-lightgreen px-8 py-3 rounded-lg text-base lg:text-xl"> 
               <a href="blog.html"> Blog </a>
             </button>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 flex-col md:flex-row">
               <img src="assets/logo.png" alt="">
               <span class="text-black font-semibold text-base lg:text-xl"> Donate Bangladesh </span> 
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 flex-col md:flex-row">
               <img src="assets/coin.png" alt="">
               <p id="total-money" class="font-medium opacity-70 text-base lg:text-xl"> 5500 BDT </p>
             </div>
@@ -51,6 +51,23 @@
 
       <main class="my-[72px]">
         <div id="donation-div" class="max-w-[85%] mx-auto">  
+
+                    <!-- the modal for congratulation -->
+          <!-- Open the modal using ID.showModal() method -->
+          <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+          <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <h3 class="text-lg font-bold">Hello!</h3>
+              <p class="py-4">Press ESC key or click the button below to close</p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
                     <!-- Donation  -->
           <!-- first card -->
           <div class="border-bordercolor border-[1px] rounded-2xl mb-4 lg:mb-6">
@@ -79,15 +96,15 @@
               <div class="w-full md:w-[55%] flex flex-col gap-4">
                 <div class="flex items-center gap-3 bg-lightash w-max p-3 rounded-lg">
                   <img src="assets/coin.png" alt="">
-                  <p class="font-medium opacity-70 text-base lg:text-xl"> 0 BDT </p>
+                  <p id="feni-money" class="font-medium opacity-70 text-base lg:text-xl"> 0 BDT </p>
                 </div>
                 <p class="text-black font-bold text-base lg:text-xl"> Donate for Flood Relief in Feni,Bangladesh </p>
                 <p class="text-black text-opacity-70 text-sm lg:text-base">
                   The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies. 
                   Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference.
                 </p>
-                <input class="w-full px-4 py-3 mt-2 border-bordercolor border-[1px] rounded-lg" type="text" placeholder="Write Donation Amount">
-                <button class="w-full text-black font-semibold px-4 py-3 bg-lightgreen rounded-lg text-base lg:text-xl"> Donate Now </button>
+                <input id="feni-add" class="w-full px-4 py-3 mt-2 border-bordercolor border-[1px] rounded-lg" type="text" placeholder="Write Donation Amount">
+                <button id="feni-donate" class="w-full text-black font-semibold px-4 py-3 bg-lightgreen rounded-lg text-base lg:text-xl"> Donate Now </button>
               </div>
             </div>
           </div>
@@ -99,15 +116,15 @@
               <div class="w-full md:w-[55%] flex flex-col gap-4">
                 <div class="flex items-center gap-3 bg-lightash w-max p-3 rounded-lg">
                   <img src="assets/coin.png" alt="">
-                  <p class="font-medium opacity-70 text-base lg:text-xl"> 0 BDT </p>
+                  <p id="quota-money" class="font-medium opacity-70 text-base lg:text-xl"> 0 BDT </p>
                 </div>
                 <p class="text-black font-bold text-base lg:text-xl"> Donate for Flood at Noakhali, Bangladesh </p>
                 <p class="text-black text-opacity-70 text-sm lg:text-base">
                   The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial. you help ensure that injured individuals receive the. Every donation plays a vital role in alleviating their 
                   suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                 </p>
-                <input class="w-full px-4 py-3 mt-2 border-bordercolor border-[1px] rounded-lg" type="text" placeholder="Write Donation Amount">
-                <button class="w-full text-black font-semibold px-4 py-3 bg-lightgreen rounded-lg text-base lg:text-xl"> Donate Now </button>
+                <input id="quota-add" class="w-full px-4 py-3 mt-2 border-bordercolor border-[1px] rounded-lg" type="text" placeholder="Write Donation Amount">
+                <button id="quota-donate" class="w-full text-black font-semibold px-4 py-3 bg-lightgreen rounded-lg text-base lg:text-xl"> Donate Now </button>
               </div>
             </div>
           </div>
@@ -126,6 +143,7 @@
       </footer>
 
       <script src="scripts/event.js"></script>
+      <script src="scripts/donation.js"></script>
     </body>
 
 
