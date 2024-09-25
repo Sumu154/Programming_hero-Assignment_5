@@ -1,14 +1,18 @@
   // window scrolling header sticky
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
+    const navbar = document.getElementById('navbar');
     const toggleBtn = document.getElementById('toggle-btn');
 
     if(window.scrollY > 0){
-        header.classList.add('bg-lightash');
+        header.classList.add('bg-lightash', 'bg-opacity-60');
+        navbar.classList.remove('bg-lightash');
         toggleBtn.classList.add('pt-0');
+
     } 
     else{
         header.classList.remove('bg-lightash');
+        navbar.classList.add('bg-lightash');
         toggleBtn.classList.remove('pt-0');
     }
 });

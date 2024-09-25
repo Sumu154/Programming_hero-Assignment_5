@@ -26,7 +26,7 @@
     <body>
       <header class="sticky top-0 z-50">
         <!-- nav nar inside div -->
-        <div class="p-4 pb-8 bg-lightash">
+        <div id="navbar" class="p-4 pb-8 bg-lightash">
           <nav class="max-w-[90%] mx-auto flex justify-between items-center">
             <button class="text-black font-semibold bg-lightgreen px-8 py-3 rounded-lg text-base lg:text-xl"> 
               <a href="blog.html"> Blog </a>
@@ -49,12 +49,12 @@
         </div>
       </header>
 
-      <main class="my-[72px]">
+      <main class="my-[48px] md:my-[72px]">
         <div id="donation-div" class="max-w-[85%] mx-auto">  
 
                     <!-- the modal for congratulation -->
           <!-- Open the modal using ID.showModal() method -->
-          <dialog id="modal" class="modal modal-bottom sm:modal-middle">
+          <dialog id="modal" class="modal modal-middle">
             <div class="modal-box flex flex-col gap-2 w-[350px]">
                 <h3 class="text-3xl font-bold text-center"> Congrates! </h3>
                 <img class="mx-auto mb-2" src="assets/coin.png" alt="">
@@ -132,10 +132,7 @@
 
 
                     <!-- History  -->
-        <div id="history-div" class="hidden max-w-[85%] mx-auto">
-          <div class="border-bordercolor border-[1px] mb-4">
-            
-          </div>
+        <div id="history-div" class="hidden max-w-[80%] mx-auto">
         </div>
 
 
@@ -145,7 +142,9 @@
       </footer>
 
       <script src="scripts/event.js"></script>
+      <script src="scripts/history.js"></script>
       <script src="scripts/donation.js"></script>
+      
     </body>
 
 
