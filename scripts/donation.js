@@ -2,7 +2,7 @@
 document.getElementById('noakhali-donate').addEventListener('click', function(event){
     event.preventDefault();
     const addMoney = parseFloat(document.getElementById('noakhali-add').value);      // input er money string ke number e nite hbe
-    if(addMoney>0){
+    if(addMoney>0  && !isNaN(addMoney)){
         const presentMoney = parseFloat(document.getElementById('noakhali-money').innerText);
         const totalMoney = parseFloat(document.getElementById('total-money').innerText);
 
@@ -22,7 +22,7 @@ document.getElementById('noakhali-donate').addEventListener('click', function(ev
 document.getElementById('feni-donate').addEventListener('click', function(event){
     event.preventDefault();
     const addMoney = parseFloat(document.getElementById('feni-add').value);
-    if(addMoney>0){
+    if(addMoney>0  && !isNaN(addMoney)){
         const presentMoney = parseFloat(document.getElementById('feni-money').innerText);
         const totalMoney = parseFloat(document.getElementById('total-money').innerText);
 
@@ -42,7 +42,7 @@ document.getElementById('feni-donate').addEventListener('click', function(event)
 document.getElementById('quota-donate').addEventListener('click', function(event){
     event.preventDefault();
     const addMoney = parseFloat(document.getElementById('quota-add').value);
-    if(addMoney>0){
+    if(addMoney>0  && !isNaN(addMoney)){
         const presentMoney = parseFloat(document.getElementById('quota-money').innerText);
         const totalMoney = parseFloat(document.getElementById('total-money').innerText);
 
