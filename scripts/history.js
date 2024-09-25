@@ -4,7 +4,7 @@ document.getElementById('noakhali-donate').addEventListener('click', function(ev
     event.preventDefault();
     const addMoney = parseFloat(document.getElementById('noakhali-add').value);      // input er money string ke number e nite hbe
     
-    if(addMoney>0){
+    if(addMoney>0 && !isNaN(addMoney)){
         const dateMsg = new Date().toString();
         const parent = document.getElementById('history-div');
 
@@ -32,7 +32,7 @@ document.getElementById('feni-donate').addEventListener('click', function(event)
     event.preventDefault();
     const addMoney = parseFloat(document.getElementById('feni-add').value);      // input er money string ke number e nite hbe
     
-    if(addMoney>0){
+    if(addMoney>0 && !isNaN(addMoney)){
         const dateMsg = new Date().toString();
         const parent = document.getElementById('history-div');
 
@@ -60,7 +60,7 @@ document.getElementById('quota-donate').addEventListener('click', function(event
     event.preventDefault();
     const addMoney = parseFloat(document.getElementById('quota-add').value);      // input er money string ke number e nite hbe
     
-    if(addMoney>0){
+    if(addMoney>0 && !isNaN(addMoney)){
         const dateMsg = new Date().toString();
         const parent = document.getElementById('history-div');
 
