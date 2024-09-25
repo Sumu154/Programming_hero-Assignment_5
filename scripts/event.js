@@ -27,10 +27,10 @@ document.getElementById('history-btn').addEventListener('click', function(){
     const donationDiv = document.getElementById('donation-div');
     const historyDiv = document.getElementById('history-div');
 
-    donationBtn.classList.add('text-opacity-70', 'border-bordercolor', 'border-[1px]');
-    donationBtn.classList.remove('bg-lightgreen');
-    historyBtn.classList.add('bg-lightgreen');
-    historyBtn.classList.remove('text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    donationBtn.classList.add('hover:bg-hoverash', 'text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    donationBtn.classList.remove('bg-lightgreen', 'hover:bg-hovergreen');
+    historyBtn.classList.add('bg-lightgreen', 'hover:bg-hovergreen');
+    historyBtn.classList.remove('hover:bg-hoverash', 'text-opacity-70', 'border-bordercolor', 'border-[1px]');
     
     historyDiv.classList.remove('hidden');
     donationDiv.classList.add('hidden');
@@ -42,10 +42,10 @@ document.getElementById('donation-btn').addEventListener('click', function(){
     const donationDiv = document.getElementById('donation-div');
     const historyDiv = document.getElementById('history-div');
 
-    donationBtn.classList.add('bg-lightgreen');
-    donationBtn.classList.remove('text-opacity-70', 'border-bordercolor', 'border-[1px]');
-    historyBtn.classList.add('text-opacity-70', 'border-bordercolor', 'border-[1px]');
-    historyBtn.classList.remove('bg-lightgreen');
+    donationBtn.classList.add('bg-lightgreen', 'hover:bg-hovergreen');
+    donationBtn.classList.remove('hover:bg-hoverash', 'text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    historyBtn.classList.add('hover:bg-hoverash', 'text-opacity-70', 'border-bordercolor', 'border-[1px]');
+    historyBtn.classList.remove('bg-lightgreen', 'hover:bg-hovergreen');
 
 
     donationDiv.classList.remove('hidden');
